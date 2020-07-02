@@ -38,4 +38,4 @@ function postTweet() {
   }
 }
 
-setInterval(postTweet, 1000 * 6);
+setInterval(postTweet, 1000 * 60 * 60 * 24);
