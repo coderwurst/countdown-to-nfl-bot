@@ -34,8 +34,15 @@ function postTweet() {
   console.log(countdownMsg);
 
   function gotresult(err, data, response) {
-    console.log(`sent on ${Date.now()}`);
+    if (err) {
+      console.log(`${err} received on ${Date.now()}response: ${response}`);
+      process.exit(22);
+    } else {
+      console.log(`${data} sent on ${Date.now()}, response: ${response} `);
+    }
   }
+
+  process.exit(0);
 }
 
 postTweet();
