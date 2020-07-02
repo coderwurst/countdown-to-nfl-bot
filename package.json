@@ -1,5 +1,5 @@
 {
-  "name": "countdown2nflbot",
+  "name": "countdown-to-nfl-bot",
   "version": "1.0.0",
   "description": "twitter bot to post countdown to start of NFL season",
   "main": "index.js",
