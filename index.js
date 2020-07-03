@@ -31,18 +31,18 @@ function postTweet() {
   };
 
   T.post('statuses/update', countdownMsg, gotresult);
-  console.log(countdownMsg);
 
   function gotresult(err, data, response) {
+    console.log('enteredgetResult');
     if (err) {
-      console.log(`${err} received on ${Date.now()}response: ${response}`);
-      process.exit(22);
-    } else {
-      console.log(`${data} sent on ${Date.now()}, response: ${response} `);
+      console.log(`error: ${err} received on ${Date.now()}`);
+      process.exit(1);
+    }
+    if (response) {
+      console.log(`response: ${response} received on ${Date.now()}`);
+      process.exit(0);
     }
   }
-
-  process.exit(0);
 }
 
 postTweet();
