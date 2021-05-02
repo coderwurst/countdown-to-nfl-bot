@@ -14,7 +14,7 @@ const T = new Twit({
  * Determine number of days until new NFL season
  */
 function calculateCountdown() {
-  const startDate = new Date('2020-09-10');
+  const startDate = new Date('2021-09-09');
   const currentDate = new Date();
   const diffDays = Math.ceil(
     parseInt((currentDate - startDate) / (1000 * 60 * 60 * 24))
